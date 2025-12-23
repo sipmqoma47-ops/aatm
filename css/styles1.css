@@ -13,30 +13,15 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Header scroll behavior */
-header {
-    transition: transform 0.3s ease-in-out;
-}
-
-header.header-hidden {
-    transform: translateY(-100%);
-}
-
-header.header-visible {
-    transform: translateY(0);
-}
-
 /* Navigation Links */
 .nav-link {
     position: relative;
     color: #ffffff;
     font-weight: 600;
-    padding: 0.625rem 1rem;
+    padding: 0.625rem 1.25rem;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 0.375rem;
     transition: all 0.3s ease;
-    font-size: 0.875rem;
-    white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -205,24 +190,7 @@ img {
 
 /* Mobile Menu Animation */
 #mobile-menu {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-in-out, opacity 0.3s ease;
-}
-
-#mobile-menu.menu-open {
-    max-height: 600px;
-    opacity: 1;
-}
-
-/* Hamburger icon rotation */
-.rotate-90 {
-    transform: rotate(90deg);
-}
-
-svg {
-    transition: transform 0.3s ease;
+    transition: max-height 0.3s ease-in-out;
 }
 
 /* Success/Error Messages */

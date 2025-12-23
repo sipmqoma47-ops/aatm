@@ -1,94 +1,48 @@
+
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     
     if (mobileMenuBtn && mobileMenu) {
-        // Toggle menu on button click
-        mobileMenuBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            mobileMenu.classList.toggle('menu-open');
+        mobileMenuBtn.addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevent event from bubbling
+            mobileMenu.classList.toggle('hidden');
             
             // Animate icon
             const icon = mobileMenuBtn.querySelector('svg');
             if (icon) {
                 icon.classList.toggle('rotate-90');
             }
-            
-            console.log('Menu toggled. Open:', mobileMenu.classList.contains('menu-open'));
         });
-        
-        // Close mobile menu when a link is clicked
+    }
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+            const isClickInside = mobileMenuBtn.contains(event.target) || mobileMenu.contains(event.target);
+            if (!isClickInside) {
+                mobileMenu.classList.add('hidden');
+            }
+        }
+    });
+    
+    // Close mobile menu when a link is clicked
+    if (mobileMenu) {
         const menuLinks = mobileMenu.querySelectorAll('a');
         menuLinks.forEach(function(link) {
             link.addEventListener('click', function() {
-                mobileMenu.classList.remove('menu-open');
-                const icon = mobileMenuBtn.querySelector('svg');
-                if (icon) {
-                    icon.classList.remove('rotate-90');
-                }
+                mobileMenu.classList.add('hidden');
             });
         });
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (mobileMenu.classList.contains('menu-open')) {
-                const clickedInsideMenu = mobileMenu.contains(event.target);
-                const clickedButton = mobileMenuBtn.contains(event.target);
-                
-                if (!clickedInsideMenu && !clickedButton) {
-                    mobileMenu.classList.remove('menu-open');
-                    const icon = mobileMenuBtn.querySelector('svg');
-                    if (icon) {
-                        icon.classList.remove('rotate-90');
-                    }
-                }
-            }
-        });
-        
-        // Close mobile menu when window is resized to desktop size
-        window.addEventListener('resize', function() {
-            if (window.innerWidth >= 768 && mobileMenu.classList.contains('menu-open')) {
-                mobileMenu.classList.remove('menu-open');
-                const icon = mobileMenuBtn.querySelector('svg');
-                if (icon) {
-                    icon.classList.remove('rotate-90');
-                }
-            }
-        });
     }
-
-    // Header Hide/Show on Scroll
-    let lastScrollTop = 0;
-    const header = document.querySelector('header');
-    const scrollThreshold = 100; // Start hiding after scrolling 100px
     
-    if (header) {
-        window.addEventListener('scroll', function() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            // Only apply hide/show after scrolling past threshold
-            if (scrollTop > scrollThreshold) {
-                if (scrollTop > lastScrollTop) {
-                    // Scrolling down - hide header
-                    header.classList.add('header-hidden');
-                    header.classList.remove('header-visible');
-                } else {
-                    // Scrolling up - show header
-                    header.classList.remove('header-hidden');
-                    header.classList.add('header-visible');
-                }
-            } else {
-                // At top of page - always show header
-                header.classList.remove('header-hidden');
-                header.classList.add('header-visible');
-            }
-            
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-        }, false);
-    }
+    // Close mobile menu when window is resized to desktop size
+    window.addEventListener('resize', function() {
+        if (window.innerWidth >= 768 && mobileMenu && !mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+        }
+    });
 });
 
 // Contact Form Handling

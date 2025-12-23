@@ -11,32 +11,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="antialiased bg-neutral-50">    <!-- Header with Logo -->
-<header class="fixed w-full top-0 z-50 shadow-md">
-
-    <!-- Logo / Banner Section -->
-    <div class="relative w-full h-[200px] sm:h-[220px] md:h-[240px] overflow-hidden bg-red-700">
-        <a href="index.html" class="absolute inset-0">
-            <img
-                src="images/logo.jpeg"
-                alt="AABMP Logo"
-                class="w-full h-full object-cover object-center"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            >
-
-            <!-- Fallback text logo -->
-            <div class="hidden w-full h-full items-center justify-center bg-red-700">
-                <span class="text-white font-display text-4xl sm:text-5xl font-bold tracking-wider">
-                    AABMP
-                </span>
+<body class="antialiased bg-neutral-50">
+    
+    <!-- Header with Logo -->
+    <header class="fixed w-full top-0 z-50 bg-white shadow-md">
+        <!-- Logo Section -->
+        <div class="bg-gradient-to-r from-red-600 to-red-700 py-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-center">
+                    <a href="index.html" class="block">
+                        <!-- Logo Image - Replace src with your actual logo file -->
+                        <img src="images/logo.png" alt="AABMP Logo" class="h-20 sm:h-24 md:h-28 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <!-- Fallback text logo (hidden when image loads) -->
+                        <div class="bg-white p-4 rounded-lg shadow-lg" style="display:none;">
+                            <span class="text-red-600 font-display text-4xl sm:text-5xl font-bold tracking-wider">AABMP</span>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </a>
-    </div>
+        </div>
 
         <!-- Navigation Bar -->
         <nav class="bg-neutral-900 border-b border-red-600">
-            <div class="max-w-7xl mx-auto px-2 sm:px-2 lg:px-4">
-                <div class="flex items-center justify-between h-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
                     <!-- Desktop Menu -->
                     <div class="hidden lg:flex items-center space-x-1 w-full justify-center">
                         <a href="index.html" class="nav-link active">Home</a>
@@ -75,9 +73,8 @@
         </nav>
     </header>
 
-
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center overflow-hidden pt-72">
+    <section class="relative min-h-screen flex items-center overflow-hidden pt-32">
         <div class="absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-800 to-red-950"></div>
         <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"1\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
         
@@ -99,7 +96,7 @@
                     </p>
 
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="oils-lubricants.html" class="group relative px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 text-white font-bold text-lg rounded overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-red-600/50 text-center">
+                        <a href="products.html" class="group relative px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 text-white font-bold text-lg rounded overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-red-600/50 text-center">
                             <span class="relative z-10">View Our Products</span>
                             <div class="absolute inset-0 bg-gradient-to-r from-red-700 to-red-800 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
                         </a>
@@ -179,297 +176,99 @@
         </div>
     </section>
 
-    <!-- Premium Lubricants Section -->
-    <section class="py-20 bg-white">
+    <!-- Featured Products Section -->
+    <section class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <!-- Text Content -->
-                <div class="flex-1">
-                    <div class="inline-block px-4 py-1.5 bg-red-50 border border-red-200 rounded-full text-red-600 text-sm font-semibold tracking-wider mb-4">
-                        OILS & LUBRICANTS
+            <div class="text-center mb-16">
+                <div class="inline-block px-4 py-1.5 bg-red-50 border border-red-200 rounded-full text-red-600 text-sm font-semibold tracking-wider mb-4">
+                    OUR PRODUCT RANGE
+                </div>
+                <h2 class="font-display text-5xl sm:text-6xl text-neutral-900 mb-4">
+                    Premium <span class="text-red-600">Lubricants</span>
+                </h2>
+                <p class="text-xl text-neutral-600 max-w-2xl mx-auto">
+                    Industrial-grade solutions for all your lubrication needs
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product Card 1 -->
+                <div class="group product-card">
+                    <div class="relative overflow-hidden rounded-lg bg-gradient-to-br from-neutral-100 to-neutral-200 aspect-square mb-4">
+                        <div class="absolute inset-0 bg-gradient-to-br from-red-600/10 to-transparent"></div>
+                        <img src="images/products/hydrolic_oil.webp" alt="Hydraulic Oil" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\'%3E%3Crect fill=\'%23e5e7eb\' width=\'400\' height=\'400\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'24\' fill=\'%239ca3af\'%3EHydraulic Oil%3C/text%3E%3C/svg%3E'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
-                    <h2 class="font-display text-4xl sm:text-5xl text-neutral-900 mb-6">
-                        Premium <span class="text-red-600">Lubricants</span>
-                    </h2>
-                    <p class="text-lg text-neutral-600 mb-8 leading-relaxed">
-                        Industrial-grade oils and lubricants for all your operational needs. From hydraulic oils to cutting fluids, gear oils to engine oils - we supply the complete range to keep your machinery running smoothly.
-                    </p>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-red-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-neutral-700">Motor & Engine Oils (All Grades)</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-red-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-neutral-700">Hydraulic & Transmission Fluids</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-red-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-neutral-700">Gear Oils & Cutting Fluids</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-red-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-neutral-700">Compressor & Turbine Oils</span>
-                        </li>
-                    </ul>
-                    <a href="oils-lubricants.html" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 text-white font-bold text-lg rounded-lg hover:shadow-lg hover:shadow-red-600/50 transition-all duration-300 transform hover:-translate-y-1">
-                        View All Products
-                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    <h3 class="font-bold text-xl text-neutral-900 mb-2">Hydraulic Oils</h3>
+                    <p class="text-neutral-600 text-sm mb-4">High-performance hydraulic fluid for all systems</p>
+                    <a href="products.html" class="inline-flex items-center text-red-600 font-semibold hover:text-red-700 transition-colors">
+                        Learn More
+                        <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                         </svg>
                     </a>
                 </div>
 
-                <!-- Image Grid -->
-                <div class="flex-1">
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-gradient-to-br from-neutral-100 to-neutral-200 rounded-xl aspect-square overflow-hidden shadow-lg">
-                            <img src="images/products/excavator.png" alt="Hydraulic Oil" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" onerror="this.style.display='none'">
-                        </div>
-                        <div class="bg-gradient-to-br from-neutral-100 to-neutral-200 rounded-xl aspect-square overflow-hidden shadow-lg mt-8">
-                            <img src="images/products/truck.png" alt="Engine Oil" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" onerror="this.style.display='none'">
-                        </div>
-                        <div class="bg-gradient-to-br from-neutral-100 to-neutral-200 rounded-xl aspect-square overflow-hidden shadow-lg -mt-8">
-                            <img src="images/products/hilux.png" alt="Gear Oil" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" onerror="this.style.display='none'">
-                        </div>
-                        <div class="bg-gradient-to-br from-red-600 to-red-700 rounded-xl aspect-square overflow-hidden shadow-lg flex items-center justify-center">
-                            <div class="text-center text-white p-6">
-                                <div class="text-5xl font-display mb-2">50+</div>
-                                <div class="text-lg">Oil Products</div>
-                            </div>
-                        </div>
+                <!-- Product Card 2 -->
+                <div class="group product-card">
+                    <div class="relative overflow-hidden rounded-lg bg-gradient-to-br from-neutral-100 to-neutral-200 aspect-square mb-4">
+                        <div class="absolute inset-0 bg-gradient-to-br from-yellow-400/10 to-transparent"></div>
+                        <img src="images/products/engine_oil.jpg" alt="Engine Oil" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\'%3E%3Crect fill=\'%23e5e7eb\' width=\'400\' height=\'400\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'24\' fill=\'%239ca3af\'%3EEngine Oil%3C/text%3E%3C/svg%3E'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Automotive Care Section -->
-    <section class="py-20 bg-neutral-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
-                <!-- Text Content -->
-                <div class="flex-1">
-                    <div class="inline-block px-4 py-1.5 bg-yellow-50 border border-yellow-400 rounded-full text-yellow-700 text-sm font-semibold tracking-wider mb-4">
-                        AUTOMOTIVE CARE
-                    </div>
-                    <h2 class="font-display text-4xl sm:text-5xl text-neutral-900 mb-6">
-                        Automotive <span class="text-yellow-500">Care Products</span>
-                    </h2>
-                    <p class="text-lg text-neutral-600 mb-8 leading-relaxed">
-                        Complete range of automotive cleaning and maintenance products. From car wash shampoos to polishes, tire shine to degreasers - everything you need to keep vehicles looking their best.
-                    </p>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-yellow-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-neutral-700">Car Wash & Detailing Products</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-yellow-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-neutral-700">Polishes, Waxes & Protectants</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-yellow-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-neutral-700">Heavy Duty Degreasers</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-yellow-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-neutral-700">Tire & Wheel Care</span>
-                        </li>
-                    </ul>
-                    <a href="automotive-care.html" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-neutral-900 font-bold text-lg rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:-translate-y-1">
-                        View All Products
-                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    <h3 class="font-bold text-xl text-neutral-900 mb-2">Engine Oil</h3>
+                    <p class="text-neutral-600 text-sm mb-4">Superior engine protection and performance</p>
+                    <a href="products.html" class="inline-flex items-center text-red-600 font-semibold hover:text-red-700 transition-colors">
+                        Learn More
+                        <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                         </svg>
                     </a>
                 </div>
 
-                <!-- Image Grid -->
-                <div class="flex-1">
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-gradient-to-br from-neutral-100 to-neutral-200 rounded-xl aspect-square overflow-hidden shadow-lg">
-                            <div class="w-full h-full flex items-center justify-center text-6xl">🚗</div>
-                        </div>
-                        <div class="bg-gradient-to-br from-neutral-100 to-neutral-200 rounded-xl aspect-square overflow-hidden shadow-lg mt-8">
-                            <div class="w-full h-full flex items-center justify-center text-6xl">✨</div>
-                        </div>
-                        <div class="bg-gradient-to-br from-neutral-100 to-neutral-200 rounded-xl aspect-square overflow-hidden shadow-lg -mt-8">
-                            <div class="w-full h-full flex items-center justify-center text-6xl">🧽</div>
-                        </div>
-                        <div class="bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-xl aspect-square overflow-hidden shadow-lg flex items-center justify-center">
-                            <div class="text-center text-neutral-900 p-6">
-                                <div class="text-5xl font-display mb-2">15+</div>
-                                <div class="text-lg font-semibold">Auto Products</div>
-                            </div>
-                        </div>
+                <!-- Product Card 3 -->
+                <div class="group product-card">
+                    <div class="relative overflow-hidden rounded-lg bg-gradient-to-br from-neutral-100 to-neutral-200 aspect-square mb-4">
+                        <div class="absolute inset-0 bg-gradient-to-br from-red-600/10 to-transparent"></div>
+                        <img src="images/products/gear_oil.jpg" alt="Gear Oil" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\'%3E%3Crect fill=\'%23e5e7eb\' width=\'400\' height=\'400\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'24\' fill=\'%239ca3af\'%3EGear Oil%3C/text%3E%3C/svg%3E'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Cleaning & Housekeeping Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <!-- Text Content -->
-                <div class="flex-1">
-                    <div class="inline-block px-4 py-1.5 bg-blue-50 border border-blue-400 rounded-full text-blue-700 text-sm font-semibold tracking-wider mb-4">
-                        CLEANING PRODUCTS
-                    </div>
-                    <h2 class="font-display text-4xl sm:text-5xl text-neutral-900 mb-6">
-                        Cleaning & <span class="text-blue-600">Housekeeping</span>
-                    </h2>
-                    <p class="text-lg text-neutral-600 mb-8 leading-relaxed">
-                        Professional cleaning solutions for industrial, commercial, and household use. Disinfectants, sanitizers, kitchen products, and laundry solutions - complete hygiene solutions for your facility.
-                    </p>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-neutral-700">Disinfectants & Sanitizers</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-neutral-700">Kitchen & Food Processing</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-neutral-700">Laundry & Fabric Care</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-neutral-700">General Purpose Cleaners</span>
-                        </li>
-                    </ul>
-                    <a href="cleaning-housekeeping.html" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold text-lg rounded-lg hover:shadow-lg hover:shadow-blue-600/50 transition-all duration-300 transform hover:-translate-y-1">
-                        View All Products
-                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    <h3 class="font-bold text-xl text-neutral-900 mb-2">Gear Oil</h3>
+                    <p class="text-neutral-600 text-sm mb-4">Advanced gear protection for heavy-duty use</p>
+                    <a href="products.html" class="inline-flex items-center text-red-600 font-semibold hover:text-red-700 transition-colors">
+                        Learn More
+                        <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                         </svg>
                     </a>
                 </div>
 
-                <!-- Image Grid -->
-                <div class="flex-1">
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-gradient-to-br from-neutral-100 to-neutral-200 rounded-xl aspect-square overflow-hidden shadow-lg">
-                            <img src="images/products/degreaser.webp" alt="Degreaser" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" onerror="this.style.display='none'">
-                        </div>
-                        <div class="bg-gradient-to-br from-neutral-100 to-neutral-200 rounded-xl aspect-square overflow-hidden shadow-lg mt-8">
-                            <img src="images/products/hand_cleaner.webp" alt="Hand Cleaner" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" onerror="this.style.display='none'">
-                        </div>
-                        <div class="bg-gradient-to-br from-neutral-100 to-neutral-200 rounded-xl aspect-square overflow-hidden shadow-lg -mt-8">
-                            <div class="w-full h-full flex items-center justify-center text-6xl">🧴</div>
-                        </div>
-                        <div class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl aspect-square overflow-hidden shadow-lg flex items-center justify-center">
-                            <div class="text-center text-white p-6">
-                                <div class="text-5xl font-display mb-2">30+</div>
-                                <div class="text-lg">Cleaning Products</div>
-                            </div>
-                        </div>
+                <!-- Product Card 4 -->
+                <div class="group product-card">
+                    <div class="relative overflow-hidden rounded-lg bg-gradient-to-br from-neutral-100 to-neutral-200 aspect-square mb-4">
+                        <div class="absolute inset-0 bg-gradient-to-br from-yellow-400/10 to-transparent"></div>
+                        <img src="images/products/grease.jpg" alt="Grease" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\'%3E%3Crect fill=\'%23e5e7eb\' width=\'400\' height=\'400\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'24\' fill=\'%239ca3af\'%3EGrease%3C/text%3E%3C/svg%3E'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Floor Care Section -->
-    <section class="py-20 bg-neutral-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
-                <!-- Text Content -->
-                <div class="flex-1">
-                    <div class="inline-block px-4 py-1.5 bg-purple-50 border border-purple-400 rounded-full text-purple-700 text-sm font-semibold tracking-wider mb-4">
-                        FLOOR CARE
-                    </div>
-                    <h2 class="font-display text-4xl sm:text-5xl text-neutral-900 mb-6">
-                        Professional <span class="text-purple-600">Floor Care</span>
-                    </h2>
-                    <p class="text-lg text-neutral-600 mb-8 leading-relaxed">
-                        Complete floor maintenance solutions for commercial and industrial facilities. Polishes, sealers, strippers, and maintenance products to keep your floors looking professional and lasting longer.
-                    </p>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-purple-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-neutral-700">Floor Polishes & Sealers</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-purple-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-neutral-700">Strippers & Removers</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-purple-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-neutral-700">Maintenance Cleaners</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-purple-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-neutral-700">Spray Buff Compounds</span>
-                        </li>
-                    </ul>
-                    <a href="floor-care.html" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 text-white font-bold text-lg rounded-lg hover:shadow-lg hover:shadow-purple-600/50 transition-all duration-300 transform hover:-translate-y-1">
-                        View All Products
-                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    <h3 class="font-bold text-xl text-neutral-900 mb-2">Grease</h3>
+                    <p class="text-neutral-600 text-sm mb-4">Premium grease for extreme conditions</p>
+                    <a href="products.html" class="inline-flex items-center text-red-600 font-semibold hover:text-red-700 transition-colors">
+                        Learn More
+                        <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                         </svg>
                     </a>
                 </div>
+            </div>
 
-                <!-- Image Grid -->
-                <div class="flex-1">
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-gradient-to-br from-neutral-100 to-neutral-200 rounded-xl aspect-square overflow-hidden shadow-lg">
-                            <div class="w-full h-full flex items-center justify-center text-6xl">🧹</div>
-                        </div>
-                        <div class="bg-gradient-to-br from-neutral-100 to-neutral-200 rounded-xl aspect-square overflow-hidden shadow-lg mt-8">
-                            <div class="w-full h-full flex items-center justify-center text-6xl">✨</div>
-                        </div>
-                        <div class="bg-gradient-to-br from-neutral-100 to-neutral-200 rounded-xl aspect-square overflow-hidden shadow-lg -mt-8">
-                            <div class="w-full h-full flex items-center justify-center text-6xl">🏢</div>
-                        </div>
-                        <div class="bg-gradient-to-br from-purple-600 to-purple-700 rounded-xl aspect-square overflow-hidden shadow-lg flex items-center justify-center">
-                            <div class="text-center text-white p-6">
-                                <div class="text-5xl font-display mb-2">8+</div>
-                                <div class="text-lg">Floor Products</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="text-center mt-12">
+                <a href="products.html" class="inline-block px-8 py-4 bg-neutral-900 text-white font-bold rounded hover:bg-red-600 transition-colors duration-300">
+                    View All Products
+                </a>
             </div>
         </div>
     </section>
+
     <!-- Why Choose Us Section -->
     <section class="py-24 bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -603,7 +402,7 @@
                     <h3 class="text-lg font-bold mb-4 text-yellow-400">Quick Links</h3>
                     <ul class="space-y-3">
                         <li><a href="index.html" class="text-neutral-400 hover:text-white transition-colors">Home</a></li>
-                        <li><a href="oils-lubricants.html" class="text-neutral-400 hover:text-white transition-colors">Products</a></li>
+                        <li><a href="products.html" class="text-neutral-400 hover:text-white transition-colors">Products</a></li>
                         <li><a href="about.html" class="text-neutral-400 hover:text-white transition-colors">About Us</a></li>
                         <li><a href="contact.html" class="text-neutral-400 hover:text-white transition-colors">Contact</a></li>
                     </ul>
@@ -612,10 +411,10 @@
                 <div>
                     <h3 class="text-lg font-bold mb-4 text-yellow-400">Products</h3>
                     <ul class="space-y-3">
-                        <li><a href="oils-lubricants.html" class="text-neutral-400 hover:text-white transition-colors">Hydraulic Oils</a></li>
-                        <li><a href="oils-lubricants.html" class="text-neutral-400 hover:text-white transition-colors">Engine Oil</a></li>
-                        <li><a href="oils-lubricants.html" class="text-neutral-400 hover:text-white transition-colors">Gear Oil</a></li>
-                        <li><a href="oils-lubricants.html" class="text-neutral-400 hover:text-white transition-colors">Grease</a></li>
+                        <li><a href="products.html" class="text-neutral-400 hover:text-white transition-colors">Hydraulic Oils</a></li>
+                        <li><a href="products.html" class="text-neutral-400 hover:text-white transition-colors">Engine Oil</a></li>
+                        <li><a href="products.html" class="text-neutral-400 hover:text-white transition-colors">Gear Oil</a></li>
+                        <li><a href="products.html" class="text-neutral-400 hover:text-white transition-colors">Grease</a></li>
                     </ul>
                 </div>
 
@@ -629,7 +428,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                             </svg>
                             <div class="text-neutral-400">
-                                30194, Ext 11 Tsakane<br>
+                                30194, Ext 11<br>
                                 Brakpan, Gauteng, S.A
                             </div>
                         </li>
