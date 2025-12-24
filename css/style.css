@@ -1,3 +1,4 @@
+
 /* Custom Fonts */
 * {
     font-family: 'Barlow', sans-serif;
@@ -213,7 +214,7 @@ img {
     nav {
         display: none;
     }
-
+    
     body {
         font-size: 12pt;
     }
@@ -299,30 +300,3 @@ img {
         background-color: rgba(23, 23, 23, 0.9);
     }
 }
-
-/* ------------------ HEADER LOGO (Desktop + Mobile Responsive) ------------------ */
-header {
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.header-logo {
-    height: 72px;       /* desktop height */
-    width: auto;
-    object-fit: contain;
-    display: block;
-    max-width: 100%;
-}
-
-/* Mobile Responsive */
-@media (max-width: 640px) {
-    .header-logo {
-        height: 50px;   /* mobile height */
-    }
-
-    header {
-        padding: 0 10px;  /* reduce padding on mobile */
-    }
-}
-
